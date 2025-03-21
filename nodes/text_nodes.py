@@ -1,4 +1,9 @@
 import json
+import folder_paths
+from pathlib import Path
+
+llama_model_path = Path(folder_paths.folder_names_and_paths["zepta/llama-2-7b-chat.Q8_0.gguf"])
+
 
 class MergePrompts():
   @classmethod
@@ -31,8 +36,8 @@ class MergePrompts():
     
     # Initialize LLama model (adjust path to your model)
     try:
-        model_path = "zepta/llama-2-7b-chat.Q8_0.gguf"  # Path to your LLama model
-        llm = Llama(model_path=model_path, n_ctx=4096)
+        # model_path = "zepta/llama-2-7b-chat.Q8_0.gguf"  # Path to your LLama model
+        llm = Llama(model_path=llama_model_path, n_ctx=4096)
     except Exception as e:
         return f"Error loading LLama model: {str(e)}"
     
@@ -51,7 +56,7 @@ class MergePrompts():
     print(generalSa2VAPrompt)
     print("--------------------------------")
 
-    
+
 
     # Format subjects and their descriptions
     subject_descriptions = ""
