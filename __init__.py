@@ -1,4 +1,4 @@
-from .nodes.video_nodes import MergePrompts
+from .nodes.text_nodes import MergePrompts
 
 
 NODE_CONFIG = {
