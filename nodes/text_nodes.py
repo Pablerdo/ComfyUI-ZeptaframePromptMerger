@@ -15,7 +15,7 @@ class MergePrompts():
   RETURN_NAMES = ("prompt", )
   FUNCTION = "run"
 
-  CATEGORY = "ZeptaFramePromptMerger/text"
+  CATEGORY = "ZeptaframePromptMerger/text"
 
   def run(self, generalSa2VAPrompt, generalTextPrompt, subjectTextPrompts):
     # Deserialize the prompts
@@ -36,6 +36,23 @@ class MergePrompts():
     except Exception as e:
         return f"Error loading LLama model: {str(e)}"
     
+    print("--------------------------------")
+    print("Subject Text Prompts:")
+    print(subjectTextPrompts)
+    print("--------------------------------")
+
+    print("--------------------------------")
+    print("General Text Prompt:")
+    print(generalTextPrompt)
+    print("--------------------------------")
+
+    print("--------------------------------")
+    print("General Sa2Va Prompt:")
+    print(generalSa2VAPrompt)
+    print("--------------------------------")
+
+    
+
     # Format subjects and their descriptions
     subject_descriptions = ""
     for subject, description in subjectTextPrompts.items():
@@ -63,6 +80,11 @@ Based on the above information, merge the inputs into a cohesive and detailed pr
         merged_prompt = response["choices"][0]["text"].strip()
     except Exception as e:
         return (f"Error generating with LLama: {str(e)}",)
+    
+    print("--------------------------------")
+    print("Merged Prompt:")
+    print(merged_prompt)
+    print("--------------------------------")
 
     return (merged_prompt,) 
   
