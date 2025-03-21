@@ -3,13 +3,13 @@ name = "comfyui-zeptaframepromptmerger"
 description = "Custom node that merges general and subject-specific prompts"
 version = "1.0.5"
 license = {file = "LICENSE"}
-dependencies = ["librosa", "numpy", "pillow>=10.3.0", "scipy", "color-matcher", "matplotlib", "huggingface_hub", "transformers", "torch", "opencv-python", "mss"]
+dependencies = ["librosa", "numpy", "pillow>=10.3.0", "scipy", "color-matcher", "matplotlib", "huggingface_hub", "transformers", "torch", "opencv-python", "mss", "llama-cpp-python"]
 
 [project.urls]
-Repository = "https://github.com/Pablerdo/ComfyUI-ZeptaFramePromptMerger"
+Repository = "https://github.com/Pablerdo/ComfyUI-ZeptaframePromptMerger"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
 PublisherId = "Pablerdo"
-DisplayName = "ComfyUI-ZeptaFramePromptMerger"
+DisplayName = "ComfyUI-ZeptaframePromptMerger"
 Icon = ""
