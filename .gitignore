@@ -1,0 +1,7 @@
+test/
+__pycache__
+*.gif
+nodes/loader_nodes.py
+.DS_Store
+demo.py
+.venv
